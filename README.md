@@ -36,15 +36,19 @@ python3 open_images_downloader.py --root /media/santiago/a/data/open_images --cl
 
 
 训练过程
+
 首次训练
+
 python3 train_ssd.py --dataset_type open_images --datasets /media/santiago/data/open_images --net mb3-ssd-lite  --scheduler cosine --lr 0.01 --t_max 100 --validation_epochs 5 --num_epochs 100 --base_net_lr 0.001  --batch_size 5
 
 
 预加载之前训练的模型
+
 python3 train_ssd.py --dataset_type open_images --datasets /media/santiago/data/open_images --net mb3-ssd-lite --pretrained_ssd models/mb3-ssd-lite-Epoch-99-Loss-2.5194434596402613.pth  --scheduler cosine --lr 0.01 --t_max 100 --validation_epochs 5 --num_epochs 200 --base_net_lr 0.001  --batch_size 5
 
 
 
 测试一张图片
+
 python run_ssd_example.py mb3-ssd-lite models/mb3-ssd-lite-Epoch-99-Loss-2.5194434596402613.pth models/open-images-model-labels.txt /home/santiago/picture/test.jpg
 
