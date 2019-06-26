@@ -7,6 +7,10 @@ from vision.utils.misc import Timer
 import cv2
 import sys
 
+
+from vision.ssd.mobilenet_v3_ssd_lite import create_mobilenetv3_ssd_lite,create_mobilenetv3_ssd_lite_predictor
+
+
 if len(sys.argv) < 4:
     print('Usage: python run_ssd_example.py <net type>  <model path> <label path> [video file]')
     sys.exit(0)
@@ -35,6 +39,8 @@ elif net_type == 'mb2-ssd-lite':
     net = create_mobilenetv2_ssd_lite(len(class_names), is_test=True)
 elif net_type == 'sq-ssd-lite':
     net = create_squeezenet_ssd_lite(len(class_names), is_test=True)
+elif net_type == 'mb3-ssd-lite':
+    net = create_mobilenetv3_ssd_lite(len(class_names), is_test=True)    
 else:
     print("The net type is wrong. It should be one of vgg16-ssd, mb1-ssd and mb1-ssd-lite.")
     sys.exit(1)
@@ -50,6 +56,8 @@ elif net_type == 'mb2-ssd-lite':
     predictor = create_mobilenetv2_ssd_lite_predictor(net, candidate_size=200)
 elif net_type == 'sq-ssd-lite':
     predictor = create_squeezenet_ssd_lite_predictor(net, candidate_size=200)
+elif net_type == 'mb3-ssd-lite':
+    predictor = create_mobilenetv3_ssd_lite_predictor(net, candidate_size=10)
 else:
     print("The net type is wrong. It should be one of vgg16-ssd, mb1-ssd and mb1-ssd-lite.")
     sys.exit(1)
