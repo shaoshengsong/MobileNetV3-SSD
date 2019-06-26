@@ -2,8 +2,11 @@
 MobileNetV3-SSD implementation in PyTorch 
 
 环境 
+
 操作系统: Ubuntu18.04
+
 Python: 3.6
+
 PyTorch: 1.1.0
 
 
@@ -12,20 +15,26 @@ PyTorch: 1.1.0
 
 一 SSD部分
 https://github.com/amdegroot/ssd.pytorch
+
 A PyTorch Implementation of Single Shot MultiBox Detector 
 
 二 MobileNetV3 部分
 
 1 https://github.com/xiaolai-sqlai/mobilenetv3
+
 mobilenetv3 with pytorch，provide pre-train model 
 
 2 https://github.com/kuan-wang/pytorch-mobilenet-v3
+
 MobileNetV3 in pytorch and ImageNet pretrained models 
 
 3 https://github.com/leaderj1001/MobileNetV3-Pytorch
+
 Implementing Searching for MobileNetV3 paper using Pytorch 
 
-4 https://github.com/qfgaohao/pytorch-ssd  （严重抄袭此处）
+4 https://github.com/qfgaohao/pytorch-ssd 
+
+（严重抄袭此处）
 MobileNetV1-SSD/SSD-lite，MobileNetV2-SSD/SSD-lite部分
 
 MobileNetV1, MobileNetV2, VGG based SSD/SSD-lite implementation in Pytorch 1.0 / Pytorch 0.4. Out-of-box support for retraining on Open Images dataset. ONNX and Caffe2 support. Experiment Ideas like CoordConv. 
