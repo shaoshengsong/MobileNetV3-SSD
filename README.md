@@ -1,6 +1,12 @@
 # MobileNetV3-SSD
 MobileNetV3-SSD implementation in PyTorch 
 
+环境 
+操作系统: Ubuntu18.04
+Python: 3.6
+PyTorch: 1.1.0
+
+
 使用MobileNetV3-SSD实现目标检测
 代码参考（严重参考以下代码）
 
@@ -51,4 +57,8 @@ python3 train_ssd.py --dataset_type open_images --datasets /media/santiago/data/
 测试一张图片
 
 python run_ssd_example.py mb3-ssd-lite models/mb3-ssd-lite-Epoch-99-Loss-2.5194434596402613.pth models/open-images-model-labels.txt /home/santiago/picture/test.jpg
+
+视频检测
+
+python3 run_ssd_live_demo.py mb3-ssd-lite models/mb3-ssd-lite-Epoch-99-Loss-2.5194434596402613.pth models/open-images-model-labels.txt
 
