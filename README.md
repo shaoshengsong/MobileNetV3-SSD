@@ -1,6 +1,10 @@
 # MobileNetV3-SSD
 MobileNetV3-SSD implementation in PyTorch 
 
+目的
+Object Detection 
+应用于目标检测
+
 环境 
 
 操作系统: Ubuntu18.04
