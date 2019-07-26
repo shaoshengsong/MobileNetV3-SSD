@@ -59,6 +59,7 @@ def _make_divisible(v, divisor=8, min_value=None):
 class SqueezeBlock(nn.Module):
     def __init__(self, exp_size, divide=4):
         super(SqueezeBlock, self).__init__()
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
         self.dense = nn.Sequential(
             nn.Linear(exp_size, exp_size // divide),
             nn.ReLU(inplace=True),
@@ -68,7 +69,8 @@ class SqueezeBlock(nn.Module):
 
     def forward(self, x):
         batch, channels, height, width = x.size()
-        out = F.avg_pool2d(x, kernel_size=[height, width]).view(batch, -1)
+        #out = F.avg_pool2d(x, kernel_size=[height, width]).view(batch, -1)
+        out = self.avg_pool(x).view(batch, channels)
         out = self.dense(out)
         out = out.view(batch, channels, 1, 1)
         # out = hard_sigmoid(out)
@@ -234,6 +236,7 @@ class MobileNetV3(nn.Module):
                 nn.BatchNorm2d(out_conv1_out),
                 h_swish(inplace=True),
             )
+            self.avg_pool = nn.AdaptiveAvgPool2d(1)
             self.features.append(nn.Conv2d(out_conv1_in, out_conv1_out, kernel_size=1, stride=1))
             self.features.append(SqueezeBlock(out_conv1_out))
             self.features.append(nn.BatchNorm2d(out_conv1_out))
@@ -260,6 +263,7 @@ class MobileNetV3(nn.Module):
         out = self.block(out)
         out = self.out_conv1(out)
         batch, channels, height, width = out.size()
-        out = F.avg_pool2d(out, kernel_size=[height, width])
+        #out = F.avg_pool2d(out, kernel_size=[height, width])
+        out = self.avg_pool(out)
         out = self.out_conv2(out).view(batch, -1)
         return out
