@@ -75,3 +75,10 @@ python run_ssd_example.py mb3-ssd-lite models/mb3-ssd-lite-Epoch-99-Loss-2.51944
 
 python3 run_ssd_live_demo.py mb3-ssd-lite models/mb3-ssd-lite-Epoch-99-Loss-2.5194434596402613.pth models/open-images-model-labels.txt
 
+
+Pretrained model
+
+链接: https://pan.baidu.com/s/1byY1eJk3Hm3CTp-29KirxA 
+提取码: qxwv 
+
+
