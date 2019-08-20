@@ -22,9 +22,9 @@ PyTorch: 1.1.0
 
 
 **一 SSD部分**
-https://github.com/amdegroot/ssd.pytorch
 
-A PyTorch Implementation of Single Shot MultiBox Detector 
+
+[A PyTorch Implementation of Single Shot MultiBox Detector ](https://github.com/amdegroot/ssd.pytorch)
 
 **二 MobileNetV3 部分**
 
@@ -40,7 +40,7 @@ A PyTorch Implementation of Single Shot MultiBox Detector
 
 
 [4 MobileNetV1, MobileNetV2, VGG based SSD/SSD-lite implementation in Pytorch 1.0 / Pytorch 0.4. Out-of-box support for retraining on Open Images dataset. ONNX and Caffe2 support. Experiment Ideas like CoordConv. 
-no discernible latency cost](https://github.com/qfgaohao/pytorch-ssd).（严重抄袭此处）
+no discernible latency cost](https://github.com/qfgaohao/pytorch-ssd).
 
 
 针对4我这里没有做MobileNetV1, MobileNetV2等等代码兼容，只有MobileNetV3可用
@@ -76,9 +76,13 @@ python3 run_ssd_live_demo.py mb3-ssd-lite models/mb3-ssd-lite-Epoch-99-Loss-2.51
 
 **Cake and Bread Pretrained model**
 
+
 链接: https://pan.baidu.com/s/1byY1eJk3Hm3CTp-29KirxA 
+
 提取码: qxwv 
 
 **VOC Dataset Pretrained model**
+
 链接: https://pan.baidu.com/s/1yt_IRY0RcgSxB-YwywoHuA 
+
 提取码: 2sta 
