@@ -1,5 +1,10 @@
 # MobileNetV3-SSD
+
+
 MobileNetV3-SSD implementation in PyTorch 
+
+关于第二个版本请移步 https://github.com/shaoshengsong/MobileNetV3-SSD-Compact-Version
+有测试结果
 
 **目的**
 Object Detection 
