@@ -5,7 +5,8 @@ MobileNetV3-SSD implementation in PyTorch
 
 关于第二个版本请移步 https://github.com/shaoshengsong/MobileNetV3-SSD-Compact-Version
 有测试结果
-
+希望尝试新技术请到这里 https://github.com/shaoshengsong/quarkdet
+一个轻量级的目标检测包括多种模型
 **目的**
 Object Detection 
 应用于目标检测
